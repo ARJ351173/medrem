@@ -1,9 +1,10 @@
+ORIGNAL 5
+
 <!DOCTYPE html>
 <html lang="en" class="transition-colors duration-300">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/main.css" />
     <title>Med Reminder</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
@@ -16,55 +17,7 @@
         transition: transform 0.3s ease;
         will-change: transform;
       }
-      .pressed-effect:active {
-        transform: scale(0.97);
-        opacity: 0.85;
-        transition: transform 0.1s, opacity 0.1s;
-      }
-      /* Pressed effect for all buttons except navigation buttons (.nav-btn) */
-      button:not(.nav-btn):active {
-        transform: scale(0.97);
-        box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
-        transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
-      }
-      /* Enhanced interactive shadow effect for all buttons except .nav-btn */
-      button:not(.nav-btn) {
-        box-shadow: 0 4px #999;
-      }
-      button:not(.nav-btn):hover {
-        box-shadow: 0 6px #777;
-      }
-      button:not(.nav-btn):active {
-        transform: translateY(2px);
-        box-shadow: 0 2px #777;
-      }
-      /* Navigation button ripple effect base styles */
-      .nav-btn {
-        position: relative;
-        overflow: hidden;
-      }
-      .nav-btn::after {
-        content: "";
-        background: #f1f1f1;
-        display: block;
-        position: absolute;
-        padding-top: 300%;
-        padding-left: 350%;
-        margin-left: -20px !important;
-        margin-top: -120%;
-        opacity: 0;
-        transition: all 0.8s;
-        pointer-events: none;
-        border-radius: 50%;
-      }
-      .nav-btn:active::after {
-        padding: 0;
-        margin: 0;
-        opacity: 1;
-        transition: 0s;
-      }
     </style>
-    <link rel="stylesheet" href="/src/main.css" />
     <script>
       // Auto-set current date and time
       document.addEventListener("DOMContentLoaded", () => {
@@ -163,10 +116,7 @@
           >
         </li>
         <li>
-          <a
-            href="#"
-            onclick="navigateToSection('history'); return false;"
-            class="block px-2 py-1"
+          <a href="#" onclick="navigateToSection('history'); return false;" class="block px-2 py-1"
             >History</a
           >
         </li>
@@ -342,7 +292,7 @@
           <div class="flex items-end">
             <button
               id="add-button"
-              class="rounded bg-[#ff5945] px-6 py-2 text-white hover:bg-[#e0523f] transition mt-6 pressed-effect"
+              class="rounded bg-[#ff5945] px-6 py-2 text-white hover:bg-[#e0523f] transition mt-6"
             >
               Add
             </button>
@@ -377,12 +327,7 @@
             <tbody id="historyList"></tbody>
           </table>
           <div class="mt-4 flex justify-end">
-            <button
-              id="toggle-delete-mode"
-              class="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 pressed-effect"
-            >
-              Delete Selected
-            </button>
+            <button id="toggle-delete-mode" class="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700">Delete Selected</button>
           </div>
         </div>
       </div>
@@ -399,39 +344,35 @@
           <ul class="space-y-3 text-sm">
             <li>
               <button
-                id="my-profile-btn"
-                class="w-full text-left px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 bg-blue-100 text-blue-700 font-medium pressed-effect"
-                onclick="loadSettingsContent('profile')"
+                class="w-full text-left px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 bg-blue-100 text-blue-700 font-medium"
               >
                 My Profile
               </button>
             </li>
             <li>
               <button
-                id="security-options-btn"
-                class="w-full text-left px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 pressed-effect"
-                onclick="loadSettingsContent('security')"
+                class="w-full text-left px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 Security Options
               </button>
             </li>
             <li>
               <button
-                class="w-full text-left px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 pressed-effect"
+                class="w-full text-left px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 Chat
               </button>
             </li>
             <li>
               <button
-                class="w-full text-left px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 pressed-effect"
+                class="w-full text-left px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 Preferences
               </button>
             </li>
             <li>
               <button
-                class="w-full text-left px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 pressed-effect"
+                class="w-full text-left px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 Notifications
               </button>
@@ -439,15 +380,15 @@
             <li>
               <button
                 id="login-btn"
-                class="w-full text-left px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 pressed-effect"
+                class="w-full text-left px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 Login
               </button>
             </li>
             <li>
               <button
-                id="sign-up-btn"
-                class="w-full text-left px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 pressed-effect"
+                id="signup-btn"
+                class="w-full text-left px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 Sign Up
               </button>
@@ -455,7 +396,7 @@
             <li>
               <button
                 id="logout-btn"
-                class="w-full text-left px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 text-red-600 pressed-effect"
+                class="w-full text-left px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 text-red-600"
               >
                 Logout
               </button>
@@ -463,47 +404,37 @@
           </ul>
         </aside>
 
-        <!-- Dynamic Content Area -->
+        <!-- Main Content -->
         <section
-          id="settings-content"
           class="w-full lg:w-3/4 bg-white dark:bg-gray-800 p-4 rounded shadow space-y-6"
         >
-          <!-- This will be populated dynamically -->
-        </section>
-        <!-- Profile and Security Templates -->
-        <template id="profile-template">
           <div>
             <h2 class="text-xl font-semibold mb-2">Profile Information</h2>
             <div class="flex items-center gap-4 mb-4">
-              <div class="relative group">
+              <label for="profile-image-upload">
                 <img
                   id="profile-pic"
-                  class="h-20 w-20 rounded-full object-cover border border-gray-400 cursor-default"
+                  class="h-20 w-20 rounded-full"
                   src=""
                   alt="Profile Image"
-                  title="Click Edit to change photo"
                 />
-                <input
-                  id="profile-image-upload"
-                  type="file"
-                  accept="image/*"
-                  class="hidden"
-                />
-                <div id="image-options" class="absolute hidden flex-col space-y-1 p-2 bg-white text-black rounded shadow top-full mt-2 z-50">
-                  <button id="change-photo" class="text-sm hover:underline text-left">Change Photo</button>
-                  <button id="remove-photo" class="text-sm text-red-600 hover:underline text-left">Remove Photo</button>
-                </div>
-              </div>
+              </label>
+              <input id="profile-image-upload" type="file" accept="image/*" class="mt-2 hidden" />
               <div id="profile-info" class="hidden">
                 <p class="font-semibold" id="profile-name"></p>
+                <!-- <p
+                  class="text-sm text-gray-500 dark:text-gray-300"
+                  id="profile-position"
+                ></p> -->
               </div>
               <button
-                class="ml-auto px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm pressed-effect"
+                class="ml-auto px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm"
               >
                 Edit
               </button>
             </div>
           </div>
+
           <div>
             <h3 class="text-lg font-semibold mb-2">Personal Details</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -568,6 +499,7 @@
               </select>
             </div>
           </div>
+
           <div>
             <h3 class="text-lg font-semibold mb-2">Address</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -594,333 +526,26 @@
           <div class="flex justify-end">
             <button
               id="save-profile"
-              class="px-6 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition pressed-effect"
+              class="px-6 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
             >
               Save
             </button>
           </div>
-        </template>
-        <template id="security-template">
-          <section id="security-settings" class="mt-8">
-            <h2 class="text-xl font-semibold mb-4">Security Settings</h2>
-            <div class="mb-4">
-              <label for="new-password" class="block font-medium mb-1"
-                >Change Password:</label
-              >
-              <input
-                type="password"
-                id="new-password"
-                class="border px-2 py-1 rounded w-full max-w-xs"
-              />
-              <button
-                onclick="changePassword()"
-                class="ml-2 px-3 py-1 bg-blue-600 text-white rounded"
-              >
-                Update
-              </button>
-            </div>
-            <div class="mb-4">
-              <label class="block font-medium mb-1">Password Strength:</label>
-              <progress
-                id="pwd-strength"
-                max="100"
-                value="0"
-                class="w-full max-w-xs"
-              ></progress>
-            </div>
-            <div class="mb-4">
-              <label for="logout-time" class="block font-medium mb-1"
-                >Auto Logout Timer (min):</label
-              >
-              <select
-                id="logout-time"
-                onchange="setAutoLogout()"
-                class="border px-2 py-1 rounded text-black dark:text-white bg-white dark:bg-gray-700"
-              >
-                <option value="0">Off</option>
-                <option value="5">5</option>
-                <option value="10">10</option>
-                <option value="15">15</option>
-              </select>
-            </div>
-            <div class="mb-4">
-              <label
-                ><input type="checkbox" id="session-lock" /> Enable Session
-                Lock</label
-              >
-            </div>
-            <div class="mb-4">
-              <p>Last Login: <span id="last-login" class="font-mono"></span></p>
-              <p>
-                Last Password Change:
-                <span id="last-pwd-change" class="font-mono"></span>
-              </p>
-            </div>
-            <div class="mb-4">
-              <label
-                ><input type="checkbox" id="trust-device" /> Remember this
-                device</label
-              >
-            </div>
-            <div class="mb-4">
-              <button
-                onclick="exportData()"
-                class="px-3 py-1 bg-green-600 text-white rounded"
-              >
-                Export Backup
-              </button>
-              <input
-                type="file"
-                id="import-file"
-                onchange="importData(event)"
-                class="ml-2"
-              />
-            </div>
-          </section>
-        </template>
-        <!-- Dynamic Settings Content Loader -->
-        <script>
-          // Shared utility function to highlight the clicked sidebar/settings button
-          function highlightButton(currentBtn) {
-            const sidebarBtnIds = [
-              "my-profile-btn",
-              "security-options-btn",
-              "sign-up-btn",
-              "login-btn",
-              "logout-btn",
-              "chat-btn",
-              "preferences-btn",
-              "notifications-btn",
-            ];
-            sidebarBtnIds.forEach((id) => {
-              const btn = document.getElementById(id);
-              if (btn) {
-                btn.classList.remove("active", "bg-blue-100", "text-blue-700");
-              }
-            });
-            if (currentBtn) {
-              currentBtn.classList.add(
-                "active",
-                "bg-blue-100",
-                "text-blue-700"
-              );
-            }
-          }
-
-          // Enhanced: loadSettingsContent with profile auto-populate logic
-          function loadSettingsContent(view) {
-            const contentContainer =
-              document.getElementById("settings-content");
-            if (!contentContainer) return;
-
-            if (view === "profile") {
-              highlightButton(document.getElementById("my-profile-btn"));
-              contentContainer.innerHTML =
-                document.getElementById("profile-template").innerHTML;
-              // After loading profile, auto-populate profile fields if logged in
-              setTimeout(() => {
-                // Try to get current user
-                let username =
-                  sessionStorage.getItem("currentUser") ||
-                  localStorage.getItem("loggedInUser");
-                let allUsers = JSON.parse(
-                  localStorage.getItem("allUsers") || "{}"
-                );
-                let user = allUsers[username];
-                if (user) {
-                  // Fill profile fields with user data
-                  if (typeof populateProfile === "function") {
-                    populateProfile(user);
-                  } else {
-                    // fallback: fill fields directly
-                    const fields = {
-                      "First Name": user.firstname,
-                      "Last Name": user.lastname,
-                      Email: user.email,
-                      Phone: user.phone,
-                      "Bio (optional)": user.bio,
-                      Country: user.country,
-                      "City/State": user.city || user.citystate,
-                      "Postal Code": user.postalCode || user.postalcode,
-                    };
-                    for (const [placeholder, value] of Object.entries(fields)) {
-                      const input = document.querySelector(
-                        `input[placeholder="${placeholder}"]`
-                      );
-                      if (input && value) input.value = value;
-                    }
-                    if (user.gender)
-                      document.getElementById("gender-select").value =
-                        user.gender;
-                    if (user.nationality) {
-                      const natSel =
-                        document.getElementById("nationality-select");
-                      if (natSel) natSel.value = user.nationality;
-                    }
-                    if (user.dob) {
-                      const settingsDateInput = document.querySelector(
-                        '#settings-content input[type="date"]'
-                      );
-                      if (settingsDateInput) settingsDateInput.value = user.dob;
-                    }
-                    const fullName = `${
-                      user.firstname || user.firstName || ""
-                    } ${user.lastname || user.lastName || ""}`.trim();
-                    if (fullName) {
-                      document.getElementById("profile-name").textContent =
-                        fullName;
-                      document
-                        .getElementById("profile-info")
-                        .classList.remove("hidden");
-                      localStorage.setItem("userName", fullName);
-                    }
-                  }
-                  // Make fields editable by default
-                  document
-                    .querySelectorAll("#settings input, #settings select")
-                    .forEach((el) => {
-                      el.removeAttribute("disabled");
-                    });
-                }
-              }, 100);
-            } else if (view === "security") {
-              highlightButton(document.getElementById("security-options-btn"));
-              contentContainer.innerHTML =
-                document.getElementById("security-template").innerHTML;
-            } else if (view === "signup") {
-              highlightButton(document.getElementById("sign-up-btn"));
-              contentContainer.innerHTML =
-                document.getElementById("signup-template").innerHTML;
-            } else if (view === "login") {
-              highlightButton(document.getElementById("login-btn"));
-              // You can load login template here if needed
-            } else if (view === "logout") {
-              highlightButton(document.getElementById("logout-btn"));
-              // You can handle logout logic here if needed
-            } else {
-              contentContainer.innerHTML =
-                "<p class='text-center text-gray-500'>Select a section to view.</p>";
-            }
-          }
-
-          document.addEventListener("DOMContentLoaded", () => {
-            loadSettingsContent("profile");
-            // Attach highlightButton listeners for new sidebar buttons if present
-            document
-              .getElementById("chat-btn")
-              ?.addEventListener("click", function () {
-                highlightButton(this);
-              });
-            document
-              .getElementById("preferences-btn")
-              ?.addEventListener("click", function () {
-                highlightButton(this);
-              });
-            document
-              .getElementById("notifications-btn")
-              ?.addEventListener("click", function () {
-                highlightButton(this);
-              });
-          });
-        </script>
-
-        <script>
-          // --- Begin: Security Settings JS ---
-          function changePassword() {
-            const pwd = document.getElementById("new-password").value;
-            localStorage.setItem("userPassword", pwd);
-            const now = new Date().toLocaleString();
-            localStorage.setItem("lastPwdChange", now);
-            alert("Password updated");
-          }
-
-          function setAutoLogout() {
-            const mins = parseInt(document.getElementById("logout-time").value);
-            if (mins > 0) {
-              setTimeout(() => {
-                alert("Session expired. Logging out.");
-                window.location.reload();
-              }, mins * 60000);
-            }
-          }
-
-          function exportData() {
-            const data = JSON.stringify(localStorage);
-            const blob = new Blob([data], { type: "application/json" });
-            const a = document.createElement("a");
-            a.href = URL.createObjectURL(blob);
-            a.download = "medreminder_backup.json";
-            a.click();
-          }
-
-          function importData(event) {
-            const file = event.target.files[0];
-            const reader = new FileReader();
-            reader.onload = () => {
-              const data = JSON.parse(reader.result);
-              for (let key in data) {
-                localStorage.setItem(key, data[key]);
-              }
-              alert("Data imported!");
-              location.reload();
-            };
-            reader.readAsText(file);
-          }
-
-          // Show security options section logic: scroll to security settings
-          function showSecurityOptions() {
-            const secSettings = document.getElementById("security-settings");
-            if (secSettings) {
-              secSettings.scrollIntoView({ behavior: "smooth" });
-            }
-          }
-
-          document.addEventListener("DOMContentLoaded", () => {
-            // Only add listeners if elements exist
-            if (document.getElementById("new-password")) {
-              document
-                .getElementById("new-password")
-                .addEventListener("input", (e) => {
-                  const val = e.target.value;
-                  const strength =
-                    val.length > 8 ? 100 : val.length > 4 ? 50 : 20;
-                  document.getElementById("pwd-strength").value = strength;
-                });
-            }
-            if (document.getElementById("session-lock")) {
-              document
-                .getElementById("session-lock")
-                .addEventListener("change", (e) => {
-                  localStorage.setItem("sessionLock", e.target.checked);
-                });
-            }
-            if (document.getElementById("trust-device")) {
-              document
-                .getElementById("trust-device")
-                .addEventListener("change", (e) => {
-                  localStorage.setItem("trustedDevice", e.target.checked);
-                });
-            }
-
-            // Set last login and last pwd change fields
-            if (document.getElementById("last-login"))
-              document.getElementById("last-login").textContent =
-                localStorage.getItem("lastLogin") || "N/A";
-            if (document.getElementById("last-pwd-change"))
-              document.getElementById("last-pwd-change").textContent =
-                localStorage.getItem("lastPwdChange") || "N/A";
-            localStorage.setItem("lastLogin", new Date().toLocaleString());
-          });
-          // --- End: Security Settings JS ---
-        </script>
+        </section>
       </div>
     </div>
 
-    <!-- Signup Page Template -->
-    <template id="signup-template">
+    <!-- Signup Page -->
+    <div class="hidden p-5" id="signup-page">
       <div
         class="max-w-3xl mx-auto bg-white dark:bg-gray-800 p-6 rounded shadow space-y-6"
       >
+        <button
+          onclick="navigateToSection('settings')"
+          class="text-sm text-blue-600 hover:underline mb-2"
+        >
+          &larr; Back to Settings
+        </button>
         <h2
           class="text-xl font-semibold mb-4 text-center text-gray-800 dark:text-white"
         >
@@ -1087,13 +712,13 @@
         <div class="flex justify-end">
           <button
             id="submit-signup"
-            class="px-6 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition pressed-effect"
+            class="px-6 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
           >
             Submit
           </button>
         </div>
       </div>
-    </template>
+    </div>
 
     <!-- JavaScript -->
     <script>
@@ -1149,460 +774,458 @@
           if (themeToggleMobile) themeToggleMobile.textContent = "Dark Mode";
         }
 
-        // --- Begin: Add button login check and logic (REFACTORED for user-specific localStorage/sessionStorage) ---
-        if (addButton) {
-          addButton.addEventListener("click", () => {
-            const isLoggedIn = localStorage.getItem("isLoggedIn");
-            if (isLoggedIn !== "true") {
-              alert("Please log in first");
-              return;
-            }
+      // --- Begin: Add button login check and logic (REFACTORED for user-specific localStorage/sessionStorage) ---
+      if (addButton) {
+        addButton.addEventListener("click", () => {
+          const isLoggedIn = localStorage.getItem("isLoggedIn");
+          if (isLoggedIn !== "true") {
+            alert("Please log in first");
+            return;
+          }
 
-            // Get current user from sessionStorage
-            const currentUser =
-              sessionStorage.getItem("currentUser") ||
-              localStorage.getItem("loggedInUser");
-            if (!currentUser) {
-              alert("User not found in session.");
-              return;
-            }
-            const medsKey = `meds_${currentUser}`;
+          // Get current user from sessionStorage
+          const currentUser = sessionStorage.getItem("currentUser") || localStorage.getItem("loggedInUser");
+          if (!currentUser) {
+            alert("User not found in session.");
+            return;
+          }
+          const medsKey = `meds_${currentUser}`;
 
-            // Proceed with add medicine logic as before:
-            console.log("✅ Add button clicked");
-            const medicine = inputBox.value.trim();
-            let date = dateInput.value.trim();
-            const time = timeInput.value.trim();
-            const dose = dosageInput.valueAsNumber;
-            const stock = stockInput.valueAsNumber;
-            const note = noteInput.value.trim();
-            const frequency = frequencyInput.value;
+          // Proceed with add medicine logic as before:
+          console.log("✅ Add button clicked");
+          const medicine = inputBox.value.trim();
+          let date = dateInput.value.trim();
+          const time = timeInput.value.trim();
+          const dose = dosageInput.valueAsNumber;
+          const stock = stockInput.valueAsNumber;
+          const note = noteInput.value.trim();
+          const frequency = frequencyInput.value;
 
-            // Frequency/date logic (calculate display date string)
-            const today = new Date();
-            if (frequency === "everyday") {
-              date = today.toLocaleDateString("en-GB", {
-                weekday: "short",
-                day: "numeric",
-                month: "short",
-                year: "numeric",
-              });
-            } else if (frequency === "weekly") {
-              // Find next selected weekday from today
-              const selectedDay = weekdayInput.value;
-              const weekdays = [
-                "Sunday",
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday",
-                "Saturday",
-              ];
-              let nextDate = new Date(today);
-              const todayIndex = nextDate.getDay();
-              const targetIndex = weekdays.indexOf(selectedDay);
-              let daysUntilNext = (targetIndex - todayIndex + 7) % 7;
-              if (daysUntilNext === 0) daysUntilNext = 7;
-              nextDate.setDate(today.getDate() + daysUntilNext);
-              date = nextDate.toLocaleDateString("en-GB", {
-                weekday: "short",
-                day: "numeric",
-                month: "short",
-                year: "numeric",
-              });
-            } else if (frequency === "alternate") {
-              const nextDate = new Date(today);
-              nextDate.setDate(today.getDate() + 2);
-              date = nextDate.toLocaleDateString("en-GB", {
-                weekday: "short",
-                day: "numeric",
-                month: "short",
-                year: "numeric",
-              });
-            } else if (frequency === "monthly") {
-              const nextDate = new Date(today);
-              nextDate.setMonth(today.getMonth() + 1);
-              date = nextDate.toLocaleDateString("en-GB", {
-                weekday: "short",
-                day: "numeric",
-                month: "short",
-                year: "numeric",
-              });
-            }
+          // Frequency/date logic (calculate display date string)
+          const today = new Date();
+          if (frequency === "everyday") {
+            date = today.toLocaleDateString("en-GB", {
+              weekday: "short",
+              day: "numeric",
+              month: "short",
+              year: "numeric",
+            });
+          } else if (frequency === "weekly") {
+            // Find next selected weekday from today
+            const selectedDay = weekdayInput.value;
+            const weekdays = [
+              "Sunday",
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+            ];
+            let nextDate = new Date(today);
+            const todayIndex = nextDate.getDay();
+            const targetIndex = weekdays.indexOf(selectedDay);
+            let daysUntilNext = (targetIndex - todayIndex + 7) % 7;
+            if (daysUntilNext === 0) daysUntilNext = 7;
+            nextDate.setDate(today.getDate() + daysUntilNext);
+            date = nextDate.toLocaleDateString("en-GB", {
+              weekday: "short",
+              day: "numeric",
+              month: "short",
+              year: "numeric",
+            });
+          } else if (frequency === "alternate") {
+            const nextDate = new Date(today);
+            nextDate.setDate(today.getDate() + 2);
+            date = nextDate.toLocaleDateString("en-GB", {
+              weekday: "short",
+              day: "numeric",
+              month: "short",
+              year: "numeric",
+            });
+          } else if (frequency === "monthly") {
+            const nextDate = new Date(today);
+            nextDate.setMonth(today.getMonth() + 1);
+            date = nextDate.toLocaleDateString("en-GB", {
+              weekday: "short",
+              day: "numeric",
+              month: "short",
+              year: "numeric",
+            });
+          }
 
-            // DEBUG: Raw values before validation
-            console.log("Medicine raw input:", inputBox.value);
-            console.log("Date raw input:", dateInput.value);
-            console.log("Time raw input:", timeInput.value);
-            console.log("Dosage raw input:", dosageInput.value);
-            console.log("Stock raw input:", stockInput.value);
+          // DEBUG: Raw values before validation
+          console.log("Medicine raw input:", inputBox.value);
+          console.log("Date raw input:", dateInput.value);
+          console.log("Time raw input:", timeInput.value);
+          console.log("Dosage raw input:", dosageInput.value);
+          console.log("Stock raw input:", stockInput.value);
 
-            console.log("Medicine:", medicine);
-            console.log("Date:", date);
-            console.log("Time:", time);
-            console.log("Dose (raw):", dosageInput.value);
-            console.log("Stock (raw):", stockInput.value);
-            console.log("Dose:", dose);
-            console.log("Stock:", stock);
+          console.log("Medicine:", medicine);
+          console.log("Date:", date);
+          console.log("Time:", time);
+          console.log("Dose (raw):", dosageInput.value);
+          console.log("Stock (raw):", stockInput.value);
+          console.log("Dose:", dose);
+          console.log("Stock:", stock);
 
-            // Validation logic for required fields
-            let dateRequired = true;
-            if (frequency === "everyday" || frequency === "weekly") {
-              dateRequired = false;
-            }
-            if (
-              !medicine ||
-              (!date && dateRequired) ||
-              !time ||
-              isNaN(dose) ||
-              isNaN(stock) ||
-              dose <= 0 ||
-              stock <= 0
-            ) {
-              alert("Please fill in all required fields with valid values.");
-              return;
-            }
+          // Validation logic for required fields
+          let dateRequired = true;
+          if (frequency === "everyday" || frequency === "weekly") {
+            dateRequired = false;
+          }
+          if (
+            !medicine ||
+            (!date && dateRequired) ||
+            !time ||
+            isNaN(dose) ||
+            isNaN(stock) ||
+            dose <= 0 ||
+            stock <= 0
+          ) {
+            alert("Please fill in all required fields with valid values.");
+            return;
+          }
 
-            const parsedDose = dose;
-            const parsedStock = stock;
+          const parsedDose = dose;
+          const parsedStock = stock;
 
-            const wrapper = document.createElement("div");
-            wrapper.className =
-              "relative swipe-wrapper overflow-hidden rounded";
+          const wrapper = document.createElement("div");
+          wrapper.className =
+            "relative swipe-wrapper overflow-hidden rounded";
 
-            const deleteBtn = document.createElement("button");
-            deleteBtn.textContent = "Delete";
-            deleteBtn.className =
-              "absolute right-2 top-0 bottom-0 w-20 bg-red-600 text-white z-10 translate-x-full transition-transform duration-300";
-            deleteBtn.addEventListener("click", () => wrapper.remove());
+          const deleteBtn = document.createElement("button");
+          deleteBtn.textContent = "Delete";
+          deleteBtn.className =
+            "absolute right-2 top-0 bottom-0 w-20 bg-red-600 text-white z-10 translate-x-full transition-transform duration-300";
+          deleteBtn.addEventListener("click", () => wrapper.remove());
 
-            const li = document.createElement("li");
-            li.dataset.stock = parsedStock;
-            li.dataset.dose = parsedDose;
-            li.className =
-              "p-2 bg-gray-100 dark:bg-gray-700 text-black dark:text-white transition-transform duration-300";
-            li.innerHTML = `<strong>${medicine}</strong> — ${date} at ${time} | Stock: <span class="stock">${parsedStock}</span>${
-              note ? " — Note: " + note : ""
-            } — <span class="italic text-sm text-gray-600 dark:text-gray-300">(${frequency})</span>`;
-            li.innerHTML += ` — <span class="italic text-sm text-gray-600 dark:text-gray-300 next-date">(Next: ${date})</span>`;
-            li.innerHTML += `
+          const li = document.createElement("li");
+          li.dataset.stock = parsedStock;
+          li.dataset.dose = parsedDose;
+          li.className =
+            "p-2 bg-gray-100 dark:bg-gray-700 text-black dark:text-white transition-transform duration-300";
+          li.innerHTML = `<strong>${medicine}</strong> — ${date} at ${time} | Stock: <span class="stock">${parsedStock}</span>${
+            note ? " — Note: " + note : ""
+          } — <span class="italic text-sm text-gray-600 dark:text-gray-300">(${frequency})</span>`;
+          li.innerHTML += ` — <span class="italic text-sm text-gray-600 dark:text-gray-300 next-date">(Next: ${date})</span>`;
+          li.innerHTML += `
             <div class="flex justify-end gap-2 mt-2 mr-4">
               <button class="taken-btn px-3 py-1 text-sm bg-green-500 text-white rounded hover:bg-green-600">Taken</button>
               <button class="snooze-btn px-3 py-1 text-sm bg-yellow-500 text-white rounded hover:bg-yellow-600">Snooze</button>
             </div>
           `;
 
-            let startX = 0;
-            let isDragging = false;
+          let startX = 0;
+          let isDragging = false;
 
-            li.addEventListener("touchstart", (e) => {
-              startX = e.touches[0].clientX;
-            });
-
-            li.addEventListener("touchmove", (e) => {
-              const deltaX = e.touches[0].clientX - startX;
-              if (deltaX < -50) {
-                li.style.transform = "translateX(-80px)";
-                deleteBtn.style.transform = "translateX(0)";
-              } else if (deltaX > 30) {
-                li.style.transform = "translateX(0)";
-                deleteBtn.style.transform = "translateX(100%)";
-              }
-            });
-
-            li.addEventListener("mousedown", (e) => {
-              isDragging = true;
-              startX = e.clientX;
-            });
-
-            li.addEventListener("mousemove", (e) => {
-              if (!isDragging) return;
-              const deltaX = e.clientX - startX;
-              if (deltaX < -50) {
-                li.style.transform = "translateX(-80px)";
-                deleteBtn.style.transform = "translateX(0)";
-              } else if (deltaX > 30) {
-                li.style.transform = "translateX(0)";
-                deleteBtn.style.transform = "translateX(100%)";
-              }
-            });
-
-            li.addEventListener("mouseup", () => {
-              isDragging = false;
-            });
-
-            li.addEventListener("mouseleave", () => {
-              isDragging = false;
-            });
-
-            wrapper.appendChild(deleteBtn);
-            wrapper.appendChild(li);
-            listContainer.appendChild(wrapper);
-
-            // Save medicine to localStorage using user-specific key
-            let meds = JSON.parse(localStorage.getItem(medsKey) || "[]");
-            const newMedObj = {
-              medicine,
-              date,
-              time,
-              dose: parsedDose,
-              stock: parsedStock,
-              note,
-              frequency,
-            };
-            meds.push(newMedObj);
-            localStorage.setItem(medsKey, JSON.stringify(meds));
-
-            // Add Taken and Snooze button logic
-            li.querySelector(".taken-btn").addEventListener("click", (e) => {
-              e.stopPropagation();
-              if (!localStorage.getItem("isLoggedIn")) {
-                alert("Please log in to track medicine intake.");
-                return;
-              }
-              // Track last taken date and show confirmation only on repeated clicks for the same day
-              const todayStr = new Date().toDateString();
-              if (li.dataset.lastTakenDate === todayStr) {
-                const confirmed = confirm(
-                  "Do you want to add another 'Taken' entry?"
-                );
-                if (!confirmed) return;
-              } else {
-                li.dataset.lastTakenDate = todayStr;
-              }
-              let currStock = parseInt(li.dataset.stock);
-              const dose = parseInt(li.dataset.dose);
-              // Store previous stock and previous date before modifying
-              const previousStock = currStock;
-              const prevDate = li.querySelector(".next-date")?.textContent;
-              const previousNextDate =
-                li.querySelector(".next-date")?.textContent;
-
-              if (currStock >= dose) {
-                const newStock = currStock - dose;
-                li.dataset.stock = newStock;
-                li.querySelector(".stock").innerText = newStock;
-
-                logToHistory({
-                  date: new Date().toLocaleDateString(),
-                  med: medicine,
-                  dose: dose,
-                  stockLeft: newStock,
-                });
-
-                // Update next date based on frequency
-                const nextSpan = li.querySelector(".next-date");
-                let referenceDate = new Date();
-
-                if (nextSpan) {
-                  const match =
-                    nextSpan.textContent.match(/\(Next:\s*([^)]+)\)/);
-                  if (match && match[1]) {
-                    const parsed = Date.parse(match[1]);
-                    if (!isNaN(parsed)) referenceDate = new Date(parsed);
-                  }
-                }
-
-                function pushPrevDate(nextSpan, currentNext) {
-                  let history = nextSpan.dataset.prevDates
-                    ? JSON.parse(nextSpan.dataset.prevDates)
-                    : [];
-                  history.push(currentNext);
-                  nextSpan.dataset.prevDates = JSON.stringify(history);
-                }
-                if (frequency === "everyday") {
-                  const now = new Date();
-                  now.setDate(now.getDate() + 1);
-                  if (nextSpan) {
-                    const currentNext = nextSpan.textContent.replace(
-                      /\(Next:\s*([^)]+)\)/,
-                      "$1"
-                    );
-                    const newNext = now.toLocaleDateString("en-GB", {
-                      weekday: "short",
-                      day: "numeric",
-                      month: "short",
-                      year: "numeric",
-                    });
-                    if (currentNext !== newNext) {
-                      pushPrevDate(nextSpan, currentNext);
-                      nextSpan.textContent = `(Next: ${newNext})`;
-                    }
-                  }
-                }
-                if (frequency === "alternate") {
-                  const now = new Date();
-                  now.setDate(now.getDate() + 2);
-                  if (nextSpan) {
-                    const currentNext = nextSpan.textContent.replace(
-                      /\(Next:\s*([^)]+)\)/,
-                      "$1"
-                    );
-                    const newNext = now.toLocaleDateString("en-GB", {
-                      weekday: "short",
-                      day: "numeric",
-                      month: "short",
-                      year: "numeric",
-                    });
-                    if (currentNext !== newNext) {
-                      pushPrevDate(nextSpan, currentNext);
-                      nextSpan.textContent = `(Next: ${newNext})`;
-                    }
-                  }
-                }
-                if (frequency === "weekly") {
-                  const selectedDay = weekdayInput.value;
-                  const daysOfWeek = [
-                    "Sunday",
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday",
-                    "Saturday",
-                  ];
-                  const now = new Date();
-                  const todayIndex = now.getDay();
-                  const targetIndex = daysOfWeek.indexOf(selectedDay);
-                  let daysToAdd = (targetIndex - todayIndex + 7) % 7;
-                  if (daysToAdd === 0) daysToAdd = 7;
-                  now.setDate(now.getDate() + daysToAdd);
-                  if (nextSpan) {
-                    const currentNext = nextSpan.textContent.replace(
-                      /\(Next:\s*([^)]+)\)/,
-                      "$1"
-                    );
-                    const newNext = now.toLocaleDateString("en-GB", {
-                      weekday: "short",
-                      day: "numeric",
-                      month: "short",
-                      year: "numeric",
-                    });
-                    if (currentNext !== newNext) {
-                      pushPrevDate(nextSpan, currentNext);
-                      nextSpan.textContent = `(Next: ${newNext})`;
-                    }
-                  }
-                }
-                if (frequency === "monthly") {
-                  const now = new Date();
-                  now.setMonth(now.getMonth() + 1);
-                  if (nextSpan) {
-                    const currentNext = nextSpan.textContent.replace(
-                      /\(Next:\s*([^)]+)\)/,
-                      "$1"
-                    );
-                    const newNext = now.toLocaleDateString("en-GB", {
-                      weekday: "short",
-                      day: "numeric",
-                      month: "short",
-                      year: "numeric",
-                    });
-                    if (currentNext !== newNext) {
-                      pushPrevDate(nextSpan, currentNext);
-                      nextSpan.textContent = `(Next: ${newNext})`;
-                    }
-                  }
-                }
-
-                // Always add undo button if not already present
-                let undoBtn = li.querySelector(".undo-btn");
-                if (!undoBtn) {
-                  undoBtn = document.createElement("button");
-                  undoBtn.textContent = "Undo";
-                  undoBtn.className =
-                    "undo-btn ml-2 px-2 py-1 text-xs bg-blue-500 text-white rounded hover:bg-blue-600";
-                  li.querySelector(".taken-btn").after(undoBtn);
-                }
-                // Allow undo to add back the dose multiple times, capped by original stock
-                undoBtn.onclick = () => {
-                  const todayDateKey = new Date().toDateString();
-                  let undoCount = parseInt(li.dataset.undoCount || "0");
-                  if (li.dataset.lastTakenDate === todayDateKey) {
-                    if (undoCount >= 1) {
-                      const confirmUndo = confirm(
-                        `You have reversed one dose already today. Do you want to undo another dose?`
-                      );
-                      if (!confirmUndo) return;
-                    }
-                  } else {
-                    li.dataset.lastTakenDate = todayDateKey;
-                    undoCount = 0;
-                  }
-                  undoCount++;
-                  li.dataset.undoCount = undoCount.toString();
-
-                  let currentDisplayedStock = parseInt(li.dataset.stock);
-                  const restoredStock = Math.min(
-                    currentDisplayedStock + dose,
-                    stock
-                  );
-                  const nextSpan = li.querySelector(".next-date");
-
-                  if (restoredStock > currentDisplayedStock) {
-                    li.dataset.stock = restoredStock;
-                    li.querySelector(".stock").innerText = restoredStock;
-                    logToHistory({
-                      date: new Date().toLocaleDateString(),
-                      med: inputBox.value.trim(),
-                      dose: dose,
-                      stockLeft: restoredStock,
-                    });
-
-                    if (nextSpan && nextSpan.dataset.prevDates) {
-                      let history = JSON.parse(nextSpan.dataset.prevDates);
-                      if (history.length > 0) {
-                        const last = history.pop();
-                        const current = nextSpan.textContent.replace(
-                          /\(Next:\s*([^)]+)\)/,
-                          "$1"
-                        );
-                        if (last && current !== last) {
-                          nextSpan.textContent = `(Next: ${last})`;
-                          nextSpan.dataset.prevDates = JSON.stringify(history);
-                        }
-                        if (history.length === 0)
-                          delete nextSpan.dataset.prevDates;
-                      }
-                    }
-
-                    if (restoredStock === stock) {
-                      undoBtn.remove();
-                    }
-                  } else {
-                    alert(
-                      "Stock is already at original level. Cannot undo further."
-                    );
-                  }
-                };
-              } else {
-                alert("Not enough stock to take the dose.");
-              }
-            });
-
-            li.querySelector(".snooze-btn").addEventListener("click", (e) => {
-              e.stopPropagation();
-              if (!localStorage.getItem("isLoggedIn")) {
-                alert("Please log in to snooze reminders.");
-                return;
-              }
-              const now = new Date();
-              now.setMinutes(now.getMinutes() + 5);
-              alert(
-                `${medicine} snoozed for 5 more minutes (until ${now.toLocaleTimeString()})`
-              );
-            });
-
-            inputBox.value = "";
-            dateInput.value = "";
-            timeInput.value = "";
-            dosageInput.value = "";
-            stockInput.value = "";
-            noteInput.value = "";
+          li.addEventListener("touchstart", (e) => {
+            startX = e.touches[0].clientX;
           });
-        }
-        // --- End: Add button login check and logic (REFACTORED for user-specific localStorage/sessionStorage) ---
+
+          li.addEventListener("touchmove", (e) => {
+            const deltaX = e.touches[0].clientX - startX;
+            if (deltaX < -50) {
+              li.style.transform = "translateX(-80px)";
+              deleteBtn.style.transform = "translateX(0)";
+            } else if (deltaX > 30) {
+              li.style.transform = "translateX(0)";
+              deleteBtn.style.transform = "translateX(100%)";
+            }
+          });
+
+          li.addEventListener("mousedown", (e) => {
+            isDragging = true;
+            startX = e.clientX;
+          });
+
+          li.addEventListener("mousemove", (e) => {
+            if (!isDragging) return;
+            const deltaX = e.clientX - startX;
+            if (deltaX < -50) {
+              li.style.transform = "translateX(-80px)";
+              deleteBtn.style.transform = "translateX(0)";
+            } else if (deltaX > 30) {
+              li.style.transform = "translateX(0)";
+              deleteBtn.style.transform = "translateX(100%)";
+            }
+          });
+
+          li.addEventListener("mouseup", () => {
+            isDragging = false;
+          });
+
+          li.addEventListener("mouseleave", () => {
+            isDragging = false;
+          });
+
+          wrapper.appendChild(deleteBtn);
+          wrapper.appendChild(li);
+          listContainer.appendChild(wrapper);
+
+          // Save medicine to localStorage using user-specific key
+          let meds = JSON.parse(localStorage.getItem(medsKey) || '[]');
+          const newMedObj = {
+            medicine,
+            date,
+            time,
+            dose: parsedDose,
+            stock: parsedStock,
+            note,
+            frequency
+          };
+          meds.push(newMedObj);
+          localStorage.setItem(medsKey, JSON.stringify(meds));
+
+          // Add Taken and Snooze button logic
+          li.querySelector(".taken-btn").addEventListener("click", (e) => {
+            e.stopPropagation();
+            if (!localStorage.getItem("isLoggedIn")) {
+              alert("Please log in to track medicine intake.");
+              return;
+            }
+            // Track last taken date and show confirmation only on repeated clicks for the same day
+            const todayStr = new Date().toDateString();
+            if (li.dataset.lastTakenDate === todayStr) {
+              const confirmed = confirm(
+                "Do you want to add another 'Taken' entry?"
+              );
+              if (!confirmed) return;
+            } else {
+              li.dataset.lastTakenDate = todayStr;
+            }
+            let currStock = parseInt(li.dataset.stock);
+            const dose = parseInt(li.dataset.dose);
+            // Store previous stock and previous date before modifying
+            const previousStock = currStock;
+            const prevDate = li.querySelector(".next-date")?.textContent;
+            const previousNextDate =
+              li.querySelector(".next-date")?.textContent;
+
+            if (currStock >= dose) {
+              const newStock = currStock - dose;
+              li.dataset.stock = newStock;
+              li.querySelector(".stock").innerText = newStock;
+
+              logToHistory({
+                date: new Date().toLocaleDateString(),
+                med: medicine,
+                dose: dose,
+                stockLeft: newStock,
+              });
+
+              // Update next date based on frequency
+              const nextSpan = li.querySelector(".next-date");
+              let referenceDate = new Date();
+
+              if (nextSpan) {
+                const match =
+                  nextSpan.textContent.match(/\(Next:\s*([^)]+)\)/);
+                if (match && match[1]) {
+                  const parsed = Date.parse(match[1]);
+                  if (!isNaN(parsed)) referenceDate = new Date(parsed);
+                }
+              }
+
+              function pushPrevDate(nextSpan, currentNext) {
+                let history = nextSpan.dataset.prevDates
+                  ? JSON.parse(nextSpan.dataset.prevDates)
+                  : [];
+                history.push(currentNext);
+                nextSpan.dataset.prevDates = JSON.stringify(history);
+              }
+              if (frequency === "everyday") {
+                const now = new Date();
+                now.setDate(now.getDate() + 1);
+                if (nextSpan) {
+                  const currentNext = nextSpan.textContent.replace(
+                    /\(Next:\s*([^)]+)\)/,
+                    "$1"
+                  );
+                  const newNext = now.toLocaleDateString("en-GB", {
+                    weekday: "short",
+                    day: "numeric",
+                    month: "short",
+                    year: "numeric",
+                  });
+                  if (currentNext !== newNext) {
+                    pushPrevDate(nextSpan, currentNext);
+                    nextSpan.textContent = `(Next: ${newNext})`;
+                  }
+                }
+              }
+              if (frequency === "alternate") {
+                const now = new Date();
+                now.setDate(now.getDate() + 2);
+                if (nextSpan) {
+                  const currentNext = nextSpan.textContent.replace(
+                    /\(Next:\s*([^)]+)\)/,
+                    "$1"
+                  );
+                  const newNext = now.toLocaleDateString("en-GB", {
+                    weekday: "short",
+                    day: "numeric",
+                    month: "short",
+                    year: "numeric",
+                  });
+                  if (currentNext !== newNext) {
+                    pushPrevDate(nextSpan, currentNext);
+                    nextSpan.textContent = `(Next: ${newNext})`;
+                  }
+                }
+              }
+              if (frequency === "weekly") {
+                const selectedDay = weekdayInput.value;
+                const daysOfWeek = [
+                  "Sunday",
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                ];
+                const now = new Date();
+                const todayIndex = now.getDay();
+                const targetIndex = daysOfWeek.indexOf(selectedDay);
+                let daysToAdd = (targetIndex - todayIndex + 7) % 7;
+                if (daysToAdd === 0) daysToAdd = 7;
+                now.setDate(now.getDate() + daysToAdd);
+                if (nextSpan) {
+                  const currentNext = nextSpan.textContent.replace(
+                    /\(Next:\s*([^)]+)\)/,
+                    "$1"
+                  );
+                  const newNext = now.toLocaleDateString("en-GB", {
+                    weekday: "short",
+                    day: "numeric",
+                    month: "short",
+                    year: "numeric",
+                  });
+                  if (currentNext !== newNext) {
+                    pushPrevDate(nextSpan, currentNext);
+                    nextSpan.textContent = `(Next: ${newNext})`;
+                  }
+                }
+              }
+              if (frequency === "monthly") {
+                const now = new Date();
+                now.setMonth(now.getMonth() + 1);
+                if (nextSpan) {
+                  const currentNext = nextSpan.textContent.replace(
+                    /\(Next:\s*([^)]+)\)/,
+                    "$1"
+                  );
+                  const newNext = now.toLocaleDateString("en-GB", {
+                    weekday: "short",
+                    day: "numeric",
+                    month: "short",
+                    year: "numeric",
+                  });
+                  if (currentNext !== newNext) {
+                    pushPrevDate(nextSpan, currentNext);
+                    nextSpan.textContent = `(Next: ${newNext})`;
+                  }
+                }
+              }
+
+              // Always add undo button if not already present
+              let undoBtn = li.querySelector(".undo-btn");
+              if (!undoBtn) {
+                undoBtn = document.createElement("button");
+                undoBtn.textContent = "Undo";
+                undoBtn.className =
+                  "undo-btn ml-2 px-2 py-1 text-xs bg-blue-500 text-white rounded hover:bg-blue-600";
+                li.querySelector(".taken-btn").after(undoBtn);
+              }
+              // Allow undo to add back the dose multiple times, capped by original stock
+              undoBtn.onclick = () => {
+                const todayDateKey = new Date().toDateString();
+                let undoCount = parseInt(li.dataset.undoCount || "0");
+                if (li.dataset.lastTakenDate === todayDateKey) {
+                  if (undoCount >= 1) {
+                    const confirmUndo = confirm(
+                      `You have reversed one dose already today. Do you want to undo another dose?`
+                    );
+                    if (!confirmUndo) return;
+                  }
+                } else {
+                  li.dataset.lastTakenDate = todayDateKey;
+                  undoCount = 0;
+                }
+                undoCount++;
+                li.dataset.undoCount = undoCount.toString();
+
+                let currentDisplayedStock = parseInt(li.dataset.stock);
+                const restoredStock = Math.min(
+                  currentDisplayedStock + dose,
+                  stock
+                );
+                const nextSpan = li.querySelector(".next-date");
+
+                if (restoredStock > currentDisplayedStock) {
+                  li.dataset.stock = restoredStock;
+                  li.querySelector(".stock").innerText = restoredStock;
+                  logToHistory({
+                    date: new Date().toLocaleDateString(),
+                    med: inputBox.value.trim(),
+                    dose: dose,
+                    stockLeft: restoredStock,
+                  });
+
+                  if (nextSpan && nextSpan.dataset.prevDates) {
+                    let history = JSON.parse(nextSpan.dataset.prevDates);
+                    if (history.length > 0) {
+                      const last = history.pop();
+                      const current = nextSpan.textContent.replace(
+                        /\(Next:\s*([^)]+)\)/,
+                        "$1"
+                      );
+                      if (last && current !== last) {
+                        nextSpan.textContent = `(Next: ${last})`;
+                        nextSpan.dataset.prevDates = JSON.stringify(history);
+                      }
+                      if (history.length === 0)
+                        delete nextSpan.dataset.prevDates;
+                    }
+                  }
+
+                  if (restoredStock === stock) {
+                    undoBtn.remove();
+                  }
+                } else {
+                  alert(
+                    "Stock is already at original level. Cannot undo further."
+                  );
+                }
+              };
+            } else {
+              alert("Not enough stock to take the dose.");
+            }
+          });
+
+          li.querySelector(".snooze-btn").addEventListener("click", (e) => {
+            e.stopPropagation();
+            if (!localStorage.getItem("isLoggedIn")) {
+              alert("Please log in to snooze reminders.");
+              return;
+            }
+            const now = new Date();
+            now.setMinutes(now.getMinutes() + 5);
+            alert(
+              `${medicine} snoozed for 5 more minutes (until ${now.toLocaleTimeString()})`
+            );
+          });
+
+          inputBox.value = "";
+          dateInput.value = "";
+          timeInput.value = "";
+          dosageInput.value = "";
+          stockInput.value = "";
+          noteInput.value = "";
+        });
+      }
+      // --- End: Add button login check and logic (REFACTORED for user-specific localStorage/sessionStorage) ---
 
         // Frequency change logic for showing/hiding date/weekday
         frequencyInput.addEventListener("change", () => {
@@ -1619,21 +1242,18 @@
           }
         });
 
+
         // Save history using per-user key
         function logToHistory({ date, med, dose, stockLeft }) {
-          const currentUser =
-            sessionStorage.getItem("currentUser") ||
-            localStorage.getItem("loggedInUser");
+          const currentUser = sessionStorage.getItem('currentUser') || localStorage.getItem("loggedInUser");
           if (!currentUser) return;
           const historyKey = `history_${currentUser}`;
-          let historyData = JSON.parse(
-            localStorage.getItem(historyKey) || "[]"
-          );
+          let historyData = JSON.parse(localStorage.getItem(historyKey) || '[]');
           historyData.unshift({
             date: date,
             med: med,
             dose: dose,
-            stockLeft: stockLeft,
+            stockLeft: stockLeft
           });
           localStorage.setItem(historyKey, JSON.stringify(historyData));
         }
@@ -1664,13 +1284,9 @@
         }
 
         if (historyList) {
-          const currentUser =
-            sessionStorage.getItem("currentUser") ||
-            localStorage.getItem("loggedInUser");
+          const currentUser = sessionStorage.getItem('currentUser') || localStorage.getItem("loggedInUser");
           const historyKey = `history_${currentUser}`;
-          const userHistory = JSON.parse(
-            localStorage.getItem(historyKey) || "[]"
-          );
+          const userHistory = JSON.parse(localStorage.getItem(historyKey) || '[]');
           userHistory.forEach(({ date, med, dose, stockLeft }, index) => {
             const row = document.createElement("tr");
             row.className = "text-gray-800 dark:text-white";
@@ -1701,13 +1317,9 @@
         if (id === "history") {
           const historyList = document.getElementById("historyList");
           historyList.innerHTML = "";
-          const currentUser =
-            sessionStorage.getItem("currentUser") ||
-            localStorage.getItem("loggedInUser");
+          const currentUser = sessionStorage.getItem('currentUser') || localStorage.getItem("loggedInUser");
           const historyKey = `history_${currentUser}`;
-          const userHistory = JSON.parse(
-            localStorage.getItem(historyKey) || "[]"
-          );
+          const userHistory = JSON.parse(localStorage.getItem(historyKey) || '[]');
           userHistory.forEach(({ date, med, dose, stockLeft }, index) => {
             const row = document.createElement("tr");
             row.className = "text-gray-800 dark:text-white";
@@ -1740,13 +1352,9 @@
         }
       }
       // --- Begin: Profile Image Upload and LocalStorage Preview (user-specific) ---
-      (function () {
-        const currentUser =
-          sessionStorage.getItem("currentUser") ||
-          localStorage.getItem("loggedInUser");
-        const savedImg = currentUser
-          ? localStorage.getItem(`profilePicture_${currentUser}`)
-          : null;
+      (function() {
+        const currentUser = sessionStorage.getItem('currentUser') || localStorage.getItem("loggedInUser");
+        const savedImg = currentUser ? localStorage.getItem(`profilePicture_${currentUser}`) : null;
         const picEl = document.getElementById("profile-pic");
         if (picEl && savedImg) {
           picEl.src = savedImg;
@@ -1762,10 +1370,7 @@
               reader.onload = function (e) {
                 const imageBase64 = e.target.result;
                 if (currentUser) {
-                  localStorage.setItem(
-                    `profilePicture_${currentUser}`,
-                    imageBase64
-                  );
+                  localStorage.setItem(`profilePicture_${currentUser}`, imageBase64);
                   picEl.src = imageBase64;
                 }
               };
@@ -1779,270 +1384,137 @@
       // --- End: Profile Image Upload and LocalStorage Preview (user-specific) ---
     </script>
     <script>
-      // Save Profile button logic: updates localStorage for current user and disables fields
-      document.addEventListener("click", function (e) {
-        if (e.target && e.target.id === "save-profile") {
-          e.preventDefault();
-          alert("Profile changes saved!");
-          const firstName = document
-            .querySelector('input[placeholder="First Name"]')
-            ?.value.trim();
-          const lastName = document
-            .querySelector('input[placeholder="Last Name"]')
-            ?.value.trim();
-          const fullName = `${firstName} ${lastName}`.trim();
-          const currentUser =
-            sessionStorage.getItem("currentUser") ||
-            localStorage.getItem("loggedInUser");
-          const allUsers = JSON.parse(localStorage.getItem("allUsers") || "{}");
-          let user = allUsers[currentUser] || {};
-          user.firstname = firstName;
-          user.lastname = lastName;
-          user.email = document
-            .querySelector('input[placeholder="Email"]')
-            ?.value.trim();
-          user.phone = document
-            .querySelector('input[placeholder="Phone"]')
-            ?.value.trim();
-          user.bio = document
-            .querySelector('input[placeholder="Bio (optional)"]')
-            ?.value.trim();
-          user.dob = document
-            .querySelector('#settings-content input[type="date"]')
-            ?.value.trim();
-          user.gender = document.getElementById("gender-select")?.value;
-          user.nationality =
-            document.getElementById("nationality-select")?.value;
-          user.country = document
-            .querySelector('input[placeholder="Country"]')
-            ?.value.trim();
-          user.city = document
-            .querySelector('input[placeholder="City/State"]')
-            ?.value.trim();
-          user.postalCode = document
-            .querySelector('input[placeholder="Postal Code"]')
-            ?.value.trim();
-          // Save updated user profile back to allUsers
-          allUsers[currentUser] = user;
-          localStorage.setItem("allUsers", JSON.stringify(allUsers));
-          // Update display name at top
-          const profileInfo = document.getElementById("profile-info");
-          const nameEl = document.getElementById("profile-name");
-          if (fullName) {
-            nameEl.textContent = fullName;
-            profileInfo.classList.remove("hidden");
-            localStorage.setItem("userName", fullName);
-          }
-          // Disable fields after save
-          document
-            .querySelectorAll("#settings input, #settings select")
-            .forEach((el) => {
-              el.setAttribute("disabled", true);
-            });
+      document.getElementById("save-profile")?.addEventListener("click", () => {
+        alert("Profile changes saved!");
+
+        const firstName = document
+          .querySelector('input[placeholder="First Name"]')
+          .value.trim();
+        const lastName = document
+          .querySelector('input[placeholder="Last Name"]')
+          .value.trim();
+        const fullName = `${firstName} ${lastName}`.trim();
+
+        const profileInfo = document.getElementById("profile-info");
+        const nameEl = document.getElementById("profile-name");
+
+        if (fullName) {
+          nameEl.textContent = fullName;
+          profileInfo.classList.remove("hidden");
+          localStorage.setItem("userName", fullName);
         }
+
+        document
+          .querySelectorAll("#settings input, #settings select")
+          .forEach((el) => {
+            el.setAttribute("disabled", true);
+          });
       });
     </script>
     <script>
-      // Edit button logic: enable fields if user is logged in
-      document.addEventListener("click", function (e) {
-        if (
-          e.target &&
-          e.target.classList.contains("bg-blue-600") &&
-          e.target.textContent.trim().toLowerCase() === "edit"
-        ) {
-          let username =
-            sessionStorage.getItem("currentUser") ||
-            localStorage.getItem("loggedInUser");
-          let allUsers = JSON.parse(localStorage.getItem("allUsers") || "{}");
-          let user = allUsers[username];
-          if (user && localStorage.getItem("isLoggedIn") === "true") {
+      const editBtn = document.querySelector("button.bg-blue-600");
+      if (editBtn) {
+        const storedUser = JSON.parse(localStorage.getItem("userProfile") || "{}");
+        if (storedUser.username && localStorage.getItem("isLoggedIn") === "true") {
+          editBtn.addEventListener("click", () => {
             document
               .querySelectorAll("#settings input, #settings select")
               .forEach((el) => {
                 el.removeAttribute("disabled");
               });
-          } else {
+          });
+        } else {
+          editBtn.addEventListener("click", () => {
             alert("You must sign up and log in to edit your profile.");
-          }
+          });
         }
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const profilePic = document.getElementById("profile-pic");
-        const fileInput = document.getElementById("profile-image-upload");
-        const optionsMenu = document.getElementById("image-options");
-        const currentUser = sessionStorage.getItem("currentUser") || localStorage.getItem("loggedInUser");
-        const savedImg = currentUser ? localStorage.getItem(`profilePicture_${currentUser}`) : null;
-
-        if (profilePic && savedImg) {
-          profilePic.src = savedImg;
-        }
-
-        let isEditEnabled = false;
-
-        document.addEventListener("click", function (e) {
-          if (e.target && e.target.textContent.trim().toLowerCase() === "edit") {
-            isEditEnabled = true;
-            profilePic.classList.add("cursor-pointer");
-            profilePic.title = "Click to update or remove";
-          }
-          if (e.target && e.target.id === "save-profile") {
-            isEditEnabled = false;
-            optionsMenu.classList.add("hidden");
-            profilePic.classList.remove("cursor-pointer");
-            profilePic.title = "Click Edit to change photo";
-          }
-        });
-
-        profilePic.addEventListener("click", () => {
-          if (isEditEnabled) {
-            optionsMenu.classList.toggle("hidden");
-          }
-        });
-
-        document.getElementById("change-photo")?.addEventListener("click", () => {
-          fileInput.click();
-          optionsMenu.classList.add("hidden");
-        });
-
-        fileInput.addEventListener("change", function () {
-          const file = fileInput.files[0];
-          if (file && file.type.startsWith("image/")) {
-            const reader = new FileReader();
-            reader.onload = function (e) {
-              const imageBase64 = e.target.result;
-              if (currentUser) {
-                localStorage.setItem(`profilePicture_${currentUser}`, imageBase64);
-                profilePic.src = imageBase64;
-              }
-            };
-            reader.readAsDataURL(file);
-          }
-        });
-
-        document.getElementById("remove-photo")?.addEventListener("click", () => {
-          if (confirm("Are you sure you want to remove the profile picture?")) {
-            if (currentUser) {
-              localStorage.removeItem(`profilePicture_${currentUser}`);
-              profilePic.src = "";
-            }
-            optionsMenu.classList.add("hidden");
-          }
-        });
-      });
+      }
     </script>
   </body>
 </html>
 
 <script>
-  // --- Begin: Login/Signup simulation logic (ORIGNAL 5.pdf style) ---
-  // Profile population function for use after login/signup
-  function populateProfile(user) {
-    // Fill in all relevant profile form fields
-    if (!user) return;
-    const fields = {
-      "First Name": user.firstname,
-      "Last Name": user.lastname,
-      Email: user.email,
-      Phone: user.phone,
-      "Bio (optional)": user.bio,
-      Country: user.country,
-      "City/State": user.city || user.citystate,
-      "Postal Code": user.postalCode || user.postalcode,
-    };
-    for (const [placeholder, value] of Object.entries(fields)) {
-      const input = document.querySelector(
-        `input[placeholder="${placeholder}"]`
-      );
-      if (input && value !== undefined) input.value = value;
-    }
-    if (user.gender)
-      document.getElementById("gender-select") &&
-        (document.getElementById("gender-select").value = user.gender);
-    if (user.nationality) {
-      const natSel = document.getElementById("nationality-select");
-      if (natSel) natSel.value = user.nationality;
-    }
-    if (user.dob) {
-      const settingsDateInput = document.querySelector(
-        '#settings-content input[type="date"]'
-      );
-      if (settingsDateInput) settingsDateInput.value = user.dob;
-    }
-    const fullName = `${user.firstname || user.firstName || ""} ${
-      user.lastname || user.lastName || ""
-    }`.trim();
-    if (fullName) {
-      document.getElementById("profile-name").textContent = fullName;
-      document.getElementById("profile-info").classList.remove("hidden");
-      localStorage.setItem("userName", fullName);
-    }
-    // Make fields editable after login
-    document
-      .querySelectorAll("#settings input, #settings select")
-      .forEach((el) => {
-        el.removeAttribute("disabled");
-      });
-  }
-
+  // --- Begin: Login/Signup simulation logic ---
   document.addEventListener("DOMContentLoaded", () => {
     const loginBtn = document.getElementById("login-btn");
-    const signUpBtn = document.getElementById("sign-up-btn");
+    const signupBtn = document.getElementById("signup-btn");
     const logoutBtn = document.getElementById("logout-btn");
 
-    // LOGIN
-    function handleLogin() {
-      // Show login form
-      const settingsContent =
-        document.getElementById("settings-content") ||
-        document.getElementById("main-content");
-      if (settingsContent) {
-        settingsContent.innerHTML = `
-          <div class="p-6 space-y-4">
-            <h2 class="text-xl font-semibold">Login</h2>
-            <form id="login-form" class="space-y-4">
-              <div>
-                <label for="login-username" class="block text-sm font-medium">Username</label>
-                <input type="text" id="login-username" required class="mt-1 block w-full px-3 py-2 border rounded-md bg-white dark:bg-gray-700 text-black dark:text-white">
-              </div>
-              <div>
-                <label for="login-password" class="block text-sm font-medium">Password</label>
-                <input type="password" id="login-password" required class="mt-1 block w-full px-3 py-2 border rounded-md bg-white dark:bg-gray-700 text-black dark:text-white">
-              </div>
-              <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Login</button>
-            </form>
-          </div>
-        `;
+    function fillFormFields(data) {
+      const fields = {
+        "First Name": data.firstname,
+        "Last Name": data.lastname,
+        Email: data.email,
+        Phone: data.phone,
+        "Bio (optional)": data.bio,
+        Country: data.country,
+        "City/State": data.city || data.citystate,
+        "Postal Code": data.postalCode || data.postalcode,
+      };
+
+      for (const [placeholder, value] of Object.entries(fields)) {
+        const input = document.querySelector(
+          `input[placeholder="${placeholder}"]`
+        );
+        if (input && value) input.value = value;
       }
-      highlightButton(document.getElementById("login-btn"));
-      document
-        .getElementById("login-form")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          const username = document
-            .getElementById("login-username")
-            .value.trim();
-          const password = document
-            .getElementById("login-password")
-            .value.trim();
-          if (!username || !password) {
-            alert("Please fill in all fields.");
-            return;
-          }
-          // Find user in allUsers
-          const allUsers = JSON.parse(localStorage.getItem("allUsers") || "{}");
-          const user = allUsers[username];
-          if (!user || user.password !== password) {
-            alert("Invalid username or password.");
-            return;
-          }
-          // Save login/session
-          sessionStorage.setItem("loggedInUser", JSON.stringify(user));
-          sessionStorage.setItem("currentUser", username);
+      // Fill username if present
+      if (data.username) {
+        const input = document.querySelector('input[placeholder="Username"]');
+        if (input) input.value = data.username;
+      }
+      // Do NOT autofill password for security
+
+      if (data.gender)
+        document.getElementById("gender-select").value = data.gender;
+      // Fill DOB (date of birth)
+      if (data.dob) {
+        // Find the correct date input in the settings form
+        const settingsDateInput = document.querySelector('#settings input[type="date"]');
+        if (settingsDateInput) settingsDateInput.value = data.dob;
+      }
+      // Fill City/State (settings form)
+      if (data.city || data.citystate) {
+        const cityInput = document.querySelector('#settings input[placeholder="City/State"]');
+        if (cityInput) cityInput.value = data.city || data.citystate;
+      }
+      // Fill Postal Code (settings form)
+      if (data.postalCode || data.postalcode) {
+        const postalInput = document.querySelector('#settings input[placeholder="Postal Code"]');
+        if (postalInput) postalInput.value = data.postalCode || data.postalcode;
+      }
+      if (data.nationality)
+        document.getElementById("nationality-select").value = data.nationality;
+
+      const fullName = `${data.firstname || data.firstName || ""} ${
+        data.lastname || data.lastName || ""
+      }`.trim();
+      if (fullName) {
+        document.getElementById("profile-name").textContent = fullName;
+        document.getElementById("profile-info").classList.remove("hidden");
+        localStorage.setItem("userName", fullName);
+      }
+    }
+
+    if (loginBtn) {
+      loginBtn.addEventListener("click", () => {
+        const allUsers = JSON.parse(localStorage.getItem("allUsers") || "{}");
+        const inputUsername = prompt("Enter your username:");
+        // Use window.prompt for password (cannot truly hide input in browser prompt)
+        const inputPassword = window.prompt("Enter your password:");
+        const user = allUsers[inputUsername];
+        // Debug logging for stored user
+        console.log("User from allUsers:", user);
+        // Ensure both username and password exist and match
+        if (
+          user &&
+          user.password === inputPassword
+        ) {
+          fillFormFields(user);
+          // Ensure login flag is set on successful login
           localStorage.setItem("isLoggedIn", "true");
-          localStorage.setItem("loggedInUser", username);
-          // Save/display user name
+          localStorage.setItem("loggedInUser", inputUsername);
+          // Save/display user name after successful login
           const fullName =
             (user.firstname || user.firstName || "") +
             " " +
@@ -2056,58 +1528,24 @@
               profileInfo.classList.remove("hidden");
             }
           }
-          alert("Login successful!");
-          // Redirect to Settings
-          document.querySelector("#settings-btn")?.click();
-
-          // Populate personal details form
-          const loggedInUser = username;
-          const userDetails = JSON.parse(localStorage.getItem(loggedInUser));
-          if (userDetails) {
-            document.getElementById("name") &&
-              (document.getElementById("name").value = userDetails.name);
-            document.getElementById("email") &&
-              (document.getElementById("email").value = userDetails.email);
-            document.getElementById("phone") &&
-              (document.getElementById("phone").value = userDetails.phone);
-            document.getElementById("age") &&
-              (document.getElementById("age").value = userDetails.age);
-            document.getElementById("gender") &&
-              (document.getElementById("gender").value = userDetails.gender);
-          }
-          // After login, show profile, fill fields, highlight button
-          setTimeout(() => {
-            loadSettingsContent("profile");
-            setTimeout(() => {
-              populateProfile(user);
-              highlightButton(document.getElementById("my-profile-btn"));
-            }, 100);
-            setTimeout(() => navigateToSection("home"), 120);
-          }, 50);
-        });
-    }
-    if (loginBtn) {
-      loginBtn.addEventListener("click", handleLogin);
-    }
-
-    // SIGNUP
-    if (signUpBtn) {
-      signUpBtn.addEventListener("click", function () {
-        const settingsContainer = document.getElementById("settings");
-        const settingsContent = document.getElementById("settings-content");
-        if (settingsContainer) {
-          navigateToSection("settings");
-          settingsContainer.style.display = "block";
+          // Set currentUser in sessionStorage for per-user storage
+          sessionStorage.setItem('currentUser', inputUsername);
+          alert("Login successful.");
+          navigateToSection("home");
+        } else {
+          alert("Invalid username or password.");
         }
-        if (settingsContent) {
-          settingsContent.innerHTML =
-            document.getElementById("signup-template").innerHTML;
-        }
-        highlightButton(this);
       });
     }
 
-    // LOGOUT
+    // Update signupBtn event listener to show signup page
+    if (signupBtn) {
+      signupBtn.addEventListener("click", () => {
+        navigateToSection("signup-page");
+      });
+    }
+
+    // Logout handler
     if (logoutBtn) {
       logoutBtn.addEventListener("click", () => {
         localStorage.removeItem("isLoggedIn");
@@ -2124,138 +1562,83 @@
       });
     }
 
-    // SIGNUP SUBMIT
-    document.addEventListener("click", function (e) {
-      if (e.target && e.target.id === "submit-signup") {
-        e.preventDefault();
-        const user = {
-          username: document
-            .querySelector('input.signup-field[placeholder="Username"]')
-            ?.value.trim(),
-          password: document
-            .querySelector('input.signup-field[placeholder="Password"]')
-            ?.value.trim(),
-          firstname: document
-            .querySelector('input.signup-field[placeholder="First Name"]')
-            ?.value.trim(),
-          lastname: document
-            .querySelector('input.signup-field[placeholder="Last Name"]')
-            ?.value.trim(),
-          email: document
-            .querySelector('input.signup-field[placeholder="Email"]')
-            ?.value.trim(),
-          phone: document
-            .querySelector('input.signup-field[placeholder="Phone"]')
-            ?.value.trim(),
-          gender: document.getElementById("signup-gender-select")?.value,
-          dob: document
-            .querySelector('input.signup-field[type="date"]')
-            ?.value.trim(),
-          nationality: document.getElementById("signup-nationality-select")
-            ?.value,
-          country: document
-            .querySelector('input.signup-field[placeholder="Country"]')
-            ?.value.trim(),
-          city: document
-            .querySelector('input.signup-field[placeholder="City/State"]')
-            ?.value.trim(),
-          postalCode: document
-            .querySelector('input.signup-field[placeholder="Postal Code"]')
-            ?.value.trim(),
-          bio: document
-            .querySelector('input.signup-field[placeholder="Bio (optional)"]')
-            ?.value.trim(),
-        };
-        // Required fields
-        const requiredFields = [
-          "username",
-          "password",
-          "firstname",
-          "lastname",
-          "email",
-          "phone",
-          "gender",
-          "dob",
-          "nationality",
-          "country",
-          "city",
-          "postalCode",
-        ];
-        const missingFields = requiredFields.filter((key) => !user[key]);
-        if (missingFields.length > 0) {
-          alert("Please fill all details.");
-          return;
-        }
-        // Store in allUsers
-        const allUsers = JSON.parse(localStorage.getItem("allUsers") || "{}");
-        allUsers[user.username] = user;
-        localStorage.setItem("allUsers", JSON.stringify(allUsers));
-        // Store in "users" array for compatibility with ORIGNAL 5.pdf
-        let usersArr = JSON.parse(localStorage.getItem("users") || "[]");
-        usersArr.push(user);
-        localStorage.setItem("users", JSON.stringify(usersArr));
-        // Save the new user data logic here (already handled above)
-        alert("Thank you for signing up! You can now log in.");
-        // After signup, switch to settings section and show login view
-        navigateToSection("settings");
-        loadSettingsContent("login");
-      }
-    });
+    // Signup page submit handler (REFACTORED)
+    document.getElementById("submit-signup")?.addEventListener("click", () => {
+      const user = {
+        username: document.querySelector('input.signup-field[placeholder="Username"]')?.value.trim(),
+        password: document.querySelector('input.signup-field[placeholder="Password"]')?.value.trim(),
+        firstname: document.querySelector('input.signup-field[placeholder="First Name"]')?.value.trim(),
+        lastname: document.querySelector('input.signup-field[placeholder="Last Name"]')?.value.trim(),
+        email: document.querySelector('input.signup-field[placeholder="Email"]')?.value.trim(),
+        phone: document.querySelector('input.signup-field[placeholder="Phone"]')?.value.trim(),
+        gender: document.getElementById("signup-gender-select")?.value,
+        dob: document.querySelector('input.signup-field[type="date"]')?.value.trim(),
+        nationality: document.getElementById("signup-nationality-select")?.value,
+        country: document.querySelector('input.signup-field[placeholder="Country"]')?.value.trim(),
+        city: document.querySelector('input.signup-field[placeholder="City/State"]')?.value.trim(),
+        postalCode: document.querySelector('input.signup-field[placeholder="Postal Code"]')?.value.trim(),
+        bio: document.querySelector('input.signup-field[placeholder="Bio (optional)"]')?.value.trim()
+      };
 
-    // When profile section is loaded, auto-populate fields for logged in user
-    document.addEventListener("DOMContentLoaded", function () {
-      // If on profile, fill fields
-      setTimeout(function () {
-        const isLoggedIn = localStorage.getItem("isLoggedIn");
-        if (isLoggedIn === "true") {
-          let username =
-            sessionStorage.getItem("currentUser") ||
-            localStorage.getItem("loggedInUser");
-          let allUsers = JSON.parse(localStorage.getItem("allUsers") || "{}");
-          let user = allUsers[username];
-          if (user) {
-            populateProfile(user);
-          }
-        }
-      }, 200);
+      const requiredFields = [
+        "username", "password", "firstname", "lastname", "email", "phone",
+        "gender", "dob", "nationality", "country", "city", "postalCode"
+      ];
+
+      const missingFields = requiredFields.filter(key => !user[key]);
+      if (missingFields.length > 0) {
+        alert("Please fill all details.");
+        return;
+      }
+
+      const allUsers = JSON.parse(localStorage.getItem("allUsers") || "{}");
+      allUsers[user.username] = user;
+      localStorage.setItem("allUsers", JSON.stringify(allUsers));
+
+      // Auto-login and populate profile
+      localStorage.setItem("isLoggedIn", "true");
+      localStorage.setItem("loggedInUser", user.username);
+      localStorage.setItem("userName", `${user.firstname} ${user.lastname}`.trim());
+      // Set currentUser in sessionStorage for per-user storage
+      sessionStorage.setItem('currentUser', user.username);
+
+      // Store user profile for settings page usage (optional)
+      localStorage.setItem("userProfile", JSON.stringify(user));
+
+      fillFormFields(user);
+      alert("Sign up successful! You are now logged in.");
+      navigateToSection("settings");
     });
   });
   // --- End: Login/Signup simulation logic ---
 </script>
 
+
 <script>
-  document
-    .getElementById("toggle-delete-mode")
-    ?.addEventListener("click", () => {
-      const checkboxes = document.querySelectorAll(".delete-checkbox");
-      if (!checkboxes.length) return;
-      const deleting = checkboxes[0].classList.contains("hidden") === false;
+document.getElementById("toggle-delete-mode")?.addEventListener("click", () => {
+  const checkboxes = document.querySelectorAll(".delete-checkbox");
+  if (!checkboxes.length) return;
+  const deleting = checkboxes[0].classList.contains("hidden") === false;
 
-      checkboxes.forEach((cb) => cb.classList.toggle("hidden"));
+  checkboxes.forEach(cb => cb.classList.toggle("hidden"));
 
-      if (deleting) {
-        const selectedIndexes = Array.from(checkboxes)
-          .filter((cb) => cb.checked)
-          .map((cb) => parseInt(cb.dataset.index));
+  if (deleting) {
+    const selectedIndexes = Array.from(checkboxes)
+      .filter(cb => cb.checked)
+      .map(cb => parseInt(cb.dataset.index));
 
-        if (selectedIndexes.length === 0) {
-          alert("Please select at least one entry to delete.");
-          return;
-        }
+    if (selectedIndexes.length === 0) {
+      alert("Please select at least one entry to delete.");
+      return;
+    }
 
-        const currentUser =
-          sessionStorage.getItem("currentUser") ||
-          localStorage.getItem("loggedInUser");
-        const historyKey = `history_${currentUser}`;
-        const userHistory = JSON.parse(
-          localStorage.getItem(historyKey) || "[]"
-        );
+    const currentUser = sessionStorage.getItem('currentUser') || localStorage.getItem("loggedInUser");
+    const historyKey = `history_${currentUser}`;
+    const userHistory = JSON.parse(localStorage.getItem(historyKey) || '[]');
 
-        const updatedHistory = userHistory.filter(
-          (_, index) => !selectedIndexes.includes(index)
-        );
-        localStorage.setItem(historyKey, JSON.stringify(updatedHistory));
-        location.reload();
-      }
-    });
+    const updatedHistory = userHistory.filter((_, index) => !selectedIndexes.includes(index));
+    localStorage.setItem(historyKey, JSON.stringify(updatedHistory));
+    location.reload();
+  }
+});
 </script>
